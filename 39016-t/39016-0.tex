@@ -1,0 +1,49 @@
+\documentclass[french,12pt]{book}
+
+\usepackage[french,activeacute]{babel}   % French characters
+\usepackage[utf8]{inputenc}              % Use character encoding UTF8
+\usepackage[pdfborder={0 0 0}]{hyperref} % Hyperlinks
+\usepackage{makeidx}                     % Indexes
+\usepackage{appendix}
+
+\makeindex
+
+\widowpenalty=10000
+\clubpenalty=10000
+
+\renewcommand{\baselinestretch}{1.2}
+
+\def\horizontalLine{
+\begin{center}
+   \begin{tabular}{cp{1cm}cp{1cm}cp{1cm}cp{1cm}c}
+   $\bullet$&&$\bullet$&&$\bullet$&&$\bullet$&&$\bullet$\\
+   \end{tabular}
+\end{center}}
+
+\newcommand{\link}[2]{\htmladdnormallink{\texttt{#1}}{#2}}
+
+\title{
+\Huge\textbf{La guerre injuste\\lettres d'un Espagnol}
+}
+\author{\textbf{Armando Palacio Valdés}}
+
+\date{Date de sortie: $29$ février $2012$\\
+Dernière révision: \today}
+
+\begin{document}
+
+\maketitle
+
+\frontmatter
+   \include{notes}
+   \include{preface}
+   \setcounter{tocdepth}{0}
+   \tableofcontents
+
+\mainmatter
+   \include{chapters}
+   \appendix
+   \appendixpage
+   \include{appendix}
+
+\end{document}
